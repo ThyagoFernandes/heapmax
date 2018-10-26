@@ -59,15 +59,10 @@ def removermax():
     heapvalues[ultimoindice] = None
     descer(1)
     ultimoindice = ultimoindice -1
-def remover(indice):
-    global proximopai
-    global ultimoindice
-    aux = heapvalues[indice]
-    heapvalues[indice] = heapvalues[ultimoindice]
-    heapvalues[ultimoindice] = None
-    descer(indice)
-    ultimoindice = ultimoindice -1
-
+def retornar_maior():
+	return heapvalues[1]
+def retornar_menor():
+	return heapvalues[ultimoindice]
 def inserirHeap(num):
     global proximopai
     global heapvalues
@@ -95,7 +90,7 @@ inserirHeap(15)
 inserirHeap(12)
 inserirHeap(72)
 print(heapvalues)
-remover(1)
+removermax()	
 print(heapvalues)
 
 
